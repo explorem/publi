@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(225, 100%, 94%);
+    background-image: url('/images/pattern-background-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+    font-size: 1.6rem;
+    color: hsla(224, 23%, 55%, 1);
+}
+
+article {
+    max-width: 320px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.hero-container img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.card {
+    padding: 18px;
+}
+
+h1 {
+    margin-bottom: 18px;
+    font-size: 2.2rem;
+}
+
+h1,
+.plan-type {
+    color: hsla(223, 46%, 23%, 1);
+}
+
+h1,
+.plan-type,
+.cancel-order,
+.change {
+    font-weight: 900;
+}
+
+.card>p {
+    padding: 0 10px;
+    line-height: 180%;
+}
+
+.card>p,
+.payment,
+.payment-proceed,
+.cancel-order {
+    margin-bottom: 20px;
+}
+
+.payment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: hsl(225, 100%, 98%);
+}
+
+.payment,
+.payment-proceed {
+    border-radius: 10px;
+}
+
+.plan-price,
+.change {
+    font-size: 1.4rem;
+}
+
+.change {
+    color: hsl(245, 75%, 52%);
+}
+
+.payment-proceed {
+    width: 100%;
+    line-height: 50px;
+    background-color: hsl(245, 75%, 52%);
+    border-style: none;
+    color: hsl(0, 0%, 100%);
+    font-size: 1.4rem;
+    box-shadow: 2px 15px 15px 2px hsl(225, 100%, 94%);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.cancel-order,
+.plan-type {
+    font-size: 1.6rem;
+}
+
+.cancel-order {
+    display: block;
+    text-decoration: none;
+    color: hsla(224, 23%, 55%, 1);
+}
+
+.payment-proceed:active {
+    transform: translateY(5px);
+}
+
+@media (orientation: landscape) {
+    main {
+        margin: 20px;
+    }
+}
+
+@media (min-width: 1025px) {
+    body {
+        background-image: url('/images/pattern-background-desktop.svg');
+        background-size: contain;
+        font-size: 1.4rem;
+    }
+
+    article {
+        max-width: 380px;
+    }
+
+    .card {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .payment {
+        padding: 10px 20px;
+    }
+
+    .plan-price,
+    .change,
+    .cancel-order,
+    .plan-type {
+        font-size: 1.2rem;
+    }
+
+    .change:hover {
+        text-decoration: none;
+        color: hsla(224, 23%, 55%, 1);
+    }
+
+    .cancel-order:hover {
+        color: hsla(223, 46%, 23%, 1);
+    }
+
+    .payment-proceed:hover {
+        background-color: hsl(245, 75%, 52%, 0.5);
+    }
+}
